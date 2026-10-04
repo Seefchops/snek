@@ -1,0 +1,647 @@
+[gd_scene format=3 uid="uid://whabc30bpf7b"]
+
+[ext_resource type="Script" uid="uid://c3wmlevtmb15h" path="res://game.gd" id="1_h2yge"]
+[ext_resource type="Script" uid="uid://d14ctvqsdly8t" path="res://snake.gd" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://dpq4svoh2l0ol" path="res://food.gd" id="2_0xm2m"]
+[ext_resource type="Texture2D" uid="uid://bxcqn1l7nomgs" path="res://320x snake.png" id="3_lquwl"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7mycd"]
+texture = ExtResource("3_lquwl")
+margins = Vector2i(1, 1)
+separation = Vector2i(1, 1)
+texture_region_size = Vector2i(32, 32)
+use_texture_padding = false
+0:0/0 = 0
+1:0/next_alternative_id = 10
+1:0/0 = 0
+1:0/2 = 2
+1:0/2/flip_h = true
+1:0/3 = 3
+1:0/3/transpose = true
+1:0/4 = 4
+1:0/4/flip_v = true
+1:0/4/transpose = true
+2:0/next_alternative_id = 4
+2:0/0 = 0
+2:0/1 = 1
+2:0/1/transpose = true
+2:0/2 = 2
+2:0/2/flip_h = true
+2:0/3 = 3
+2:0/3/flip_v = true
+2:0/3/transpose = true
+3:0/next_alternative_id = 5
+3:0/0 = 0
+3:0/2 = 2
+3:0/2/flip_h = true
+3:0/3 = 3
+3:0/3/transpose = true
+3:0/4 = 4
+3:0/4/flip_v = true
+3:0/4/transpose = true
+9:0/0 = 0
+10:0/0 = 0
+11:0/0 = 0
+12:0/0 = 0
+13:0/0 = 0
+14:0/0 = 0
+15:0/0 = 0
+16:0/0 = 0
+17:0/0 = 0
+18:0/0 = 0
+19:0/0 = 0
+0:1/next_alternative_id = 8
+0:1/0 = 0
+0:1/1 = 1
+0:1/1/flip_h = true
+0:1/2 = 2
+0:1/2/flip_v = true
+0:1/3 = 3
+0:1/3/transpose = true
+0:1/4 = 4
+0:1/4/flip_h = true
+0:1/4/flip_v = true
+0:1/5 = 5
+0:1/5/flip_h = true
+0:1/5/transpose = true
+0:1/6 = 6
+0:1/6/flip_v = true
+0:1/6/transpose = true
+0:1/7 = 7
+0:1/7/flip_h = true
+0:1/7/flip_v = true
+0:1/7/transpose = true
+1:1/next_alternative_id = 5
+1:1/0 = 0
+1:1/2 = 2
+1:1/2/flip_h = true
+1:1/3 = 3
+1:1/3/transpose = true
+1:1/4 = 4
+1:1/4/flip_h = true
+1:1/4/transpose = true
+9:1/0 = 0
+10:1/0 = 0
+11:1/0 = 0
+12:1/0 = 0
+13:1/0 = 0
+14:1/0 = 0
+15:1/0 = 0
+16:1/0 = 0
+17:1/0 = 0
+18:1/0 = 0
+19:1/0 = 0
+9:2/0 = 0
+10:2/0 = 0
+11:2/0 = 0
+12:2/0 = 0
+13:2/0 = 0
+14:2/0 = 0
+15:2/0 = 0
+16:2/0 = 0
+17:2/0 = 0
+18:2/0 = 0
+19:2/0 = 0
+9:3/0 = 0
+10:3/0 = 0
+11:3/0 = 0
+12:3/0 = 0
+13:3/0 = 0
+14:3/0 = 0
+15:3/0 = 0
+16:3/0 = 0
+17:3/0 = 0
+18:3/0 = 0
+19:3/0 = 0
+9:4/0 = 0
+10:4/0 = 0
+11:4/0 = 0
+12:4/0 = 0
+13:4/0 = 0
+14:4/0 = 0
+15:4/0 = 0
+16:4/0 = 0
+17:4/0 = 0
+18:4/0 = 0
+19:4/0 = 0
+9:5/0 = 0
+10:5/0 = 0
+11:5/0 = 0
+12:5/0 = 0
+13:5/0 = 0
+14:5/0 = 0
+15:5/0 = 0
+16:5/0 = 0
+17:5/0 = 0
+18:5/0 = 0
+19:5/0 = 0
+9:6/0 = 0
+10:6/0 = 0
+11:6/0 = 0
+12:6/0 = 0
+13:6/0 = 0
+14:6/0 = 0
+15:6/0 = 0
+16:6/0 = 0
+17:6/0 = 0
+18:6/0 = 0
+19:6/0 = 0
+9:7/0 = 0
+10:7/0 = 0
+11:7/0 = 0
+12:7/0 = 0
+13:7/0 = 0
+14:7/0 = 0
+15:7/0 = 0
+16:7/0 = 0
+17:7/0 = 0
+18:7/0 = 0
+19:7/0 = 0
+9:8/0 = 0
+10:8/0 = 0
+11:8/0 = 0
+12:8/0 = 0
+13:8/0 = 0
+14:8/0 = 0
+15:8/0 = 0
+16:8/0 = 0
+17:8/0 = 0
+18:8/0 = 0
+19:8/0 = 0
+0:9/0 = 0
+1:9/0 = 0
+2:9/0 = 0
+3:9/0 = 0
+4:9/0 = 0
+5:9/0 = 0
+6:9/0 = 0
+7:9/0 = 0
+8:9/0 = 0
+9:9/0 = 0
+10:9/0 = 0
+11:9/0 = 0
+12:9/0 = 0
+13:9/0 = 0
+14:9/0 = 0
+15:9/0 = 0
+16:9/0 = 0
+17:9/0 = 0
+18:9/0 = 0
+19:9/0 = 0
+0:10/0 = 0
+1:10/0 = 0
+2:10/0 = 0
+3:10/0 = 0
+4:10/0 = 0
+5:10/0 = 0
+6:10/0 = 0
+7:10/0 = 0
+8:10/0 = 0
+9:10/0 = 0
+10:10/0 = 0
+11:10/0 = 0
+12:10/0 = 0
+13:10/0 = 0
+14:10/0 = 0
+15:10/0 = 0
+16:10/0 = 0
+17:10/0 = 0
+18:10/0 = 0
+19:10/0 = 0
+0:11/0 = 0
+1:11/0 = 0
+2:11/0 = 0
+3:11/0 = 0
+4:11/0 = 0
+5:11/0 = 0
+6:11/0 = 0
+7:11/0 = 0
+8:11/0 = 0
+9:11/0 = 0
+10:11/0 = 0
+11:11/0 = 0
+12:11/0 = 0
+13:11/0 = 0
+14:11/0 = 0
+15:11/0 = 0
+16:11/0 = 0
+17:11/0 = 0
+18:11/0 = 0
+19:11/0 = 0
+0:12/0 = 0
+1:12/0 = 0
+2:12/0 = 0
+3:12/0 = 0
+4:12/0 = 0
+5:12/0 = 0
+6:12/0 = 0
+7:12/0 = 0
+8:12/0 = 0
+9:12/0 = 0
+10:12/0 = 0
+11:12/0 = 0
+12:12/0 = 0
+13:12/0 = 0
+14:12/0 = 0
+15:12/0 = 0
+16:12/0 = 0
+17:12/0 = 0
+18:12/0 = 0
+19:12/0 = 0
+0:13/0 = 0
+1:13/0 = 0
+2:13/0 = 0
+3:13/0 = 0
+4:13/0 = 0
+5:13/0 = 0
+6:13/0 = 0
+7:13/0 = 0
+8:13/0 = 0
+9:13/0 = 0
+10:13/0 = 0
+11:13/0 = 0
+12:13/0 = 0
+13:13/0 = 0
+14:13/0 = 0
+15:13/0 = 0
+16:13/0 = 0
+17:13/0 = 0
+18:13/0 = 0
+19:13/0 = 0
+0:14/0 = 0
+1:14/0 = 0
+2:14/0 = 0
+3:14/0 = 0
+4:14/0 = 0
+5:14/0 = 0
+6:14/0 = 0
+7:14/0 = 0
+8:14/0 = 0
+9:14/0 = 0
+10:14/0 = 0
+11:14/0 = 0
+12:14/0 = 0
+13:14/0 = 0
+14:14/0 = 0
+15:14/0 = 0
+16:14/0 = 0
+17:14/0 = 0
+18:14/0 = 0
+19:14/0 = 0
+0:15/0 = 0
+1:15/0 = 0
+2:15/0 = 0
+3:15/0 = 0
+4:15/0 = 0
+5:15/0 = 0
+6:15/0 = 0
+7:15/0 = 0
+8:15/0 = 0
+9:15/0 = 0
+10:15/0 = 0
+11:15/0 = 0
+12:15/0 = 0
+13:15/0 = 0
+14:15/0 = 0
+15:15/0 = 0
+16:15/0 = 0
+17:15/0 = 0
+18:15/0 = 0
+19:15/0 = 0
+0:16/0 = 0
+1:16/0 = 0
+2:16/0 = 0
+3:16/0 = 0
+4:16/0 = 0
+5:16/0 = 0
+6:16/0 = 0
+7:16/0 = 0
+8:16/0 = 0
+9:16/0 = 0
+10:16/0 = 0
+11:16/0 = 0
+12:16/0 = 0
+13:16/0 = 0
+14:16/0 = 0
+15:16/0 = 0
+16:16/0 = 0
+17:16/0 = 0
+18:16/0 = 0
+19:16/0 = 0
+0:17/0 = 0
+1:17/0 = 0
+2:17/0 = 0
+3:17/0 = 0
+4:17/0 = 0
+5:17/0 = 0
+6:17/0 = 0
+7:17/0 = 0
+8:17/0 = 0
+9:17/0 = 0
+10:17/0 = 0
+11:17/0 = 0
+12:17/0 = 0
+13:17/0 = 0
+14:17/0 = 0
+15:17/0 = 0
+16:17/0 = 0
+17:17/0 = 0
+18:17/0 = 0
+19:17/0 = 0
+0:18/0 = 0
+1:18/0 = 0
+2:18/0 = 0
+3:18/0 = 0
+4:18/0 = 0
+5:18/0 = 0
+6:18/0 = 0
+7:18/0 = 0
+8:18/0 = 0
+9:18/0 = 0
+10:18/0 = 0
+11:18/0 = 0
+12:18/0 = 0
+13:18/0 = 0
+14:18/0 = 0
+15:18/0 = 0
+16:18/0 = 0
+17:18/0 = 0
+18:18/0 = 0
+19:18/0 = 0
+0:19/0 = 0
+1:19/0 = 0
+2:19/0 = 0
+3:19/0 = 0
+4:19/0 = 0
+5:19/0 = 0
+6:19/0 = 0
+7:19/0 = 0
+8:19/0 = 0
+9:19/0 = 0
+10:19/0 = 0
+11:19/0 = 0
+12:19/0 = 0
+13:19/0 = 0
+14:19/0 = 0
+15:19/0 = 0
+16:19/0 = 0
+17:19/0 = 0
+18:19/0 = 0
+19:19/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_7mycd"]
+tile_size = Vector2i(32, 32)
+sources/2 = SubResource("TileSetAtlasSource_7mycd")
+
+[node name="main" type="Node2D" unique_id=822227721]
+
+[node name="Game" type="Node" parent="." unique_id=1799015617]
+script = ExtResource("1_h2yge")
+
+[node name="SnakeTileSetLayer" type="TileMapLayer" parent="Game" unique_id=1287849065]
+tile_set = SubResource("TileSet_7mycd")
+
+[node name="SnakeVisuals" type="Node2D" parent="Game" unique_id=1206156091]
+
+[node name="Snake" type="Node2D" parent="Game" unique_id=1600911977]
+script = ExtResource("1_ig7tw")
+
+[node name="FoodVisuals" type="Node2D" parent="Game" unique_id=1072409110]
+
+[node name="Food" type="Node2D" parent="Game" unique_id=9322944]
+script = ExtResource("2_0xm2m")
+
+[node name="GameTimer" type="Timer" parent="Game" unique_id=1415596255]
+wait_time = 0.5
+
+[node name="UI" type="Node" parent="." unique_id=4705453]
+
+[node name="Score" type="Label" parent="UI" unique_id=894898450]
+visible = false
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 23.0
+grow_horizontal = 2
+
+[node name="StartGame" type="Button" parent="UI" unique_id=1035909435]
+custom_minimum_size = Vector2(100, 40)
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -50.0
+offset_top = -140.0
+offset_right = 50.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 0
+focus_neighbor_bottom = NodePath("../Settings")
+text = "Start game"
+
+[node name="Message" type="Label" parent="UI" unique_id=618614277]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -11.5
+offset_right = 150.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Game starting in "
+autowrap_mode = 2
+
+[node name="MessageTimer" type="Timer" parent="UI" unique_id=269042898]
+wait_time = 3.0
+one_shot = true
+
+[node name="Settings" type="Button" parent="UI" unique_id=1889831751]
+custom_minimum_size = Vector2(100, 30)
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -35.0
+offset_top = -89.0
+offset_right = 35.0
+offset_bottom = -58.0
+grow_horizontal = 2
+grow_vertical = 0
+focus_neighbor_top = NodePath("../StartGame")
+text = "Settings"
+
+[node name="DifficultyLabel" type="Label" parent="UI/Settings" unique_id=1255263237]
+layout_mode = 0
+offset_left = 113.0
+offset_top = -50.0
+offset_right = 213.0
+offset_bottom = -33.0
+theme_override_font_sizes/font_size = 12
+text = "Select difficulty"
+horizontal_alignment = 1
+
+[node name="EasyDifficulty" type="Button" parent="UI/Settings" unique_id=556045126]
+custom_minimum_size = Vector2(100, 20)
+layout_mode = 0
+offset_left = 113.0
+offset_top = -31.0
+offset_right = 213.0
+offset_bottom = -11.0
+theme_override_font_sizes/font_size = 8
+text = "Easy"
+
+[node name="MediumDifficulty" type="Button" parent="UI/Settings" unique_id=1366120057]
+custom_minimum_size = Vector2(100, 20)
+layout_mode = 0
+offset_left = 113.0
+offset_top = -1.0
+offset_right = 213.0
+offset_bottom = 19.0
+theme_override_font_sizes/font_size = 8
+text = "Medium"
+
+[node name="HardDifficulty" type="Button" parent="UI/Settings" unique_id=991862910]
+custom_minimum_size = Vector2(100, 20)
+layout_mode = 0
+offset_left = 113.0
+offset_top = 29.0
+offset_right = 213.0
+offset_bottom = 49.0
+theme_override_font_sizes/font_size = 8
+text = "Hard"
+
+[node name="MapSelectLabel" type="Label" parent="UI/Settings" unique_id=1944584377]
+layout_mode = 0
+offset_left = -113.0
+offset_top = -50.0
+offset_right = -13.0
+offset_bottom = -33.0
+theme_override_font_sizes/font_size = 12
+text = "Select map"
+horizontal_alignment = 1
+
+[node name="BasicMapButton" type="Button" parent="UI/Settings" unique_id=993453930]
+layout_mode = 0
+offset_left = -113.0
+offset_top = -31.0
+offset_right = -13.0
+offset_bottom = -11.0
+theme_override_font_sizes/font_size = 8
+text = "Basic"
+
+[node name="DesertMapButton" type="Button" parent="UI/Settings" unique_id=901133239]
+layout_mode = 0
+offset_left = -113.0
+offset_top = -1.0
+offset_right = -13.0
+offset_bottom = 19.0
+theme_override_font_sizes/font_size = 8
+text = "Desert"
+
+[node name="NameEntryLine" type="LineEdit" parent="UI" unique_id=652854608]
+visible = false
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -86.0
+offset_top = -211.0
+offset_right = 77.5
+offset_bottom = -180.0
+grow_horizontal = 2
+grow_vertical = 0
+placeholder_text = "name"
+max_length = 15
+emoji_menu_enabled = false
+clear_button_enabled = true
+flat = true
+
+[node name="NameEntryLabel" type="Label" parent="UI" unique_id=1170884864]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -80.0
+offset_top = 57.0
+offset_right = 74.0
+offset_bottom = 106.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "New high score achieved!
+Enter your name:"
+
+[node name="LeaderboardButton" type="Button" parent="UI" unique_id=990090952]
+custom_minimum_size = Vector2(100, 30)
+offset_left = 270.0
+offset_top = 591.0
+offset_right = 370.0
+offset_bottom = 622.0
+theme_override_font_sizes/font_size = 14
+text = "Leaderboard"
+
+[node name="LeaderboardHeader" type="Label" parent="UI/LeaderboardButton" unique_id=1751801351]
+visible = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -213.0
+offset_top = -591.0
+offset_right = 213.0
+offset_bottom = -568.0
+grow_horizontal = 2
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 20
+text = "Top 10 leaderboard entries"
+
+[node name="LeaderboardTable" type="Label" parent="UI/LeaderboardButton" unique_id=335444864]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.16700001
+anchor_top = 0.036000002
+anchor_right = 0.16700001
+anchor_bottom = 0.036000002
+offset_left = -179.7
+offset_top = -569.116
+offset_right = -139.7
+offset_bottom = -546.116
+metadata/_edit_use_anchors_ = true
+
+[node name="LeaderboardGrid" type="GridContainer" parent="UI/LeaderboardButton" unique_id=1441016138]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = -18.065
+anchor_right = 0.5
+anchor_bottom = -18.065
+offset_left = -213.0
+offset_top = 0.015014648
+offset_right = 387.0
+offset_bottom = 40.015015
+grow_horizontal = 2
+theme_override_constants/h_separation = 100
+columns = 3
+
+[connection signal="timeout" from="Game/GameTimer" to="Game" method="tick"]
+[connection signal="pressed" from="UI/StartGame" to="Game" method="_on_start_game_pressed"]
+[connection signal="pressed" from="UI/Settings" to="Game" method="_on_settings_pressed"]
+[connection signal="pressed" from="UI/Settings/EasyDifficulty" to="Game" method="_on_easy_difficulty_pressed"]
+[connection signal="pressed" from="UI/Settings/MediumDifficulty" to="Game" method="_on_medium_difficulty_pressed"]
+[connection signal="pressed" from="UI/Settings/HardDifficulty" to="Game" method="_on_hard_difficulty_pressed"]
+[connection signal="pressed" from="UI/Settings/BasicMapButton" to="Game" method="_on_basic_map_button_pressed"]
+[connection signal="pressed" from="UI/Settings/DesertMapButton" to="Game" method="_on_desert_map_button_pressed"]
+[connection signal="text_submitted" from="UI/NameEntryLine" to="Game" method="save_to_ldb_array"]
+[connection signal="pressed" from="UI/LeaderboardButton" to="Game" method="_on_leaderboard_button_pressed"]
