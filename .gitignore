@@ -23,6 +23,7 @@ test.tscn
 # Art specific ignores
 80xsnake.png
 80xsnake.png.import
+*.kra
 
 # Mono-specific ignores
 .mono/
